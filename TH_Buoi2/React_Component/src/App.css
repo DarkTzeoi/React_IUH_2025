@@ -1,7 +1,20 @@
+body {
+  background-color: thistle;
+  margin: 0 auto;
+}
+#root {
+  margin: 0 auto;
+  font-family: serif;
+  font-size: larger;
+}
+
 .red {
   color: red;
 }
 
 .blue {
   color: blue;
+}
+
+hr {
 }
