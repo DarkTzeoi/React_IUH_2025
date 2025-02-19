@@ -10,6 +10,13 @@ export default class DisplayInfor extends Component {
             <div key={user.id} className={user.Age < 18 ? "red" : "blue"}>
               <div>My name is: {user.Name} </div>
               <div>My age is: {user.Age} </div>
+              <button
+                onClick={() => {
+                  this.props.handleDeleteUser(user.id);
+                }}
+              >
+                Delete
+              </button>
               <hr />
             </div>
           );

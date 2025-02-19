@@ -27,6 +27,13 @@ export default class MyComponent extends Component {
     });
   };
 
+  handleDeleteUser = (userID) => {
+    let listUserClone = this.state.listUser;
+    listUserClone = listUserClone.filter((item) => item.id != userID);
+    this.setState({
+      listUser: listUserClone,
+    });
+  };
   render() {
     let parent = "this is my parent";
     return (
@@ -37,7 +44,10 @@ export default class MyComponent extends Component {
         {/* <ChildComponent myProps={parent} sum={this.sum} /> */}
         <AddUserInfor handleAddnewUser={this.handleAddnewUser} />
         <hr />
-        <DisplayInfor listUser={this.state.listUser} />
+        <DisplayInfor
+          listUser={this.state.listUser}
+          handleDeleteUser={this.handleDeleteUser}
+        />
       </div>
     );
   }
