@@ -1,5 +1,5 @@
 body {
-  background-color: thistle;
+  background-color: brown;
   margin: 0 auto;
 }
 #root {
@@ -14,4 +14,15 @@ body {
 
 .blue {
   color: blue;
+}
+.show-hide {
+  background-color: blueviolet;
+  padding: 10px;
+  margin: 20px 0;
+  border-radius: 50px;
+}
+
+.show-hide:hover {
+  background-color: aqua;
+  color: black;
 }
