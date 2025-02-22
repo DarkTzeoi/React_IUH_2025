@@ -8,11 +8,14 @@ const DisplayInfor = ({ listUser, handleDeleteUser }) => {
   };
 
   useEffect(() => {
-    if (listUser.length === 0) {
-      alert("You deleted all users!");
-    }
-    console.log("useEffect called: listUser changed");
+    if (listUser.length === 0) alert("You deleted all users");
+    console.log("call useeffect");
+
+    if (listUser.length >= 10) alert("List user full");
+    console.log("call useeffect");
   }, [listUser]);
+
+
 
   return (
     <div>

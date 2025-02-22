@@ -20,11 +20,15 @@ const MyComponent = (props) => {
     setUsers(listUserClone);
   };
 
+  const handleDeleteAllUser = () => {
+    setUsers([]);
+  };
   return (
     <div>
       <AddUserInfor handleAddnewUser={handleAddnewUser} />
       <hr />
       <DisplayInfor listUser={users} handleDeleteUser={handleDeleteUser} />
+      <button onClick={handleDeleteAllUser}>Delete ALL</button>
     </div>
   );
 };
