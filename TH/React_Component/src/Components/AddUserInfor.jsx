@@ -3,7 +3,6 @@ import React, { useState } from "react";
 const AddUserInfor = (props) => {
   const [name, setName] = useState("");
   const [age, setAge] = useState("");
-  const [address, setAddress] = useState("HCM");
 
   const handleOnchangeInput = (event) => {
     setName(event.target.value);
