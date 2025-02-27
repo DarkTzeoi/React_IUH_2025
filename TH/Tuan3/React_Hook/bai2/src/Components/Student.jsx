@@ -94,20 +94,19 @@ const Student = () => {
         {state.students.map((student) => (
           <li key={student.id}>
             {student.name} - Điểm trung bình:{" "}
-            {/* {(
+            {(
               (student.thuongKy +
                 student.thucHanh +
                 student.giuaKy +
                 student.cuoiKy) /
               4
-            ).toFixed(2)} */}
-            {averageScore}
+            ).toFixed(2)}
             <button onClick={() => handleEdit(student)}>Sửa</button>
             <button onClick={() => handleDelete(student.id)}>Xoá</button>
           </li>
         ))}
       </ul>
-
+      <h3>Diem trung binh cua tat ca sinh vien la: {averageScore} </h3>
       <h3>{editingId ? "Sửa sinh viên" : "Thêm sinh viên"}</h3>
       <input
         ref={inputRef}
