@@ -147,7 +147,6 @@ const Student = () => {
       />
       <button
         onClick={handleAddStudent}
-        s
         onKeyDown={(e) => e.key === "Enter" && handleAddStudent()}
       >
         {editingId ? "Sửa điểm" : "Thêm sinh viên"}
