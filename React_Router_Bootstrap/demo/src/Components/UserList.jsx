@@ -1,3 +1,4 @@
+import { Card, Container, ListGroup, ListGroupItem } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 const users = [
@@ -8,15 +9,15 @@ const users = [
 
 const UserList = () => {
   return (
-    <div>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link to={`/user/${user.id}`}>{user.name}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+      {users.map((user) => (
+        <ListGroup as="ol" numbered>
+          <ListGroupItem variant="primary" action href={`/user/${user.id}`}>
+            {user.name}
+          </ListGroupItem>
+        </ListGroup>
+      ))}
+    </>
   );
 };
 
