@@ -1,0 +1,384 @@
+/* Cartier-inspired styles */
+:root {
+  --primary-color: #b8860b;
+  --secondary-color: #f5f5f5;
+  --text-color: #333;
+  --light-text: #777;
+  --border-color: #e0e0e0;
+}
+
+body {
+  margin: 0;
+  font-family: "Didot", "Times New Roman", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--text-color);
+  background-color: #fff;
+}
+
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+  letter-spacing: 1px;
+}
+
+.fw-light {
+  font-weight: 300 !important;
+}
+
+/* Luxury Navigation Header */
+.luxury-navbar {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+  background-color: white;
+}
+
+/* Add this new minimalist navigation style */
+.minimalist-nav {
+  display: flex;
+  justify-content: center;
+  padding: 1.5rem 0;
+  margin: 0;
+  list-style: none;
+}
+
+.minimalist-nav-item {
+  margin: 0 1.5rem;
+}
+
+.minimalist-nav-link {
+  color: #000;
+  text-decoration: none;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #000;
+  transition: opacity 0.3s ease;
+}
+
+.minimalist-nav-link:hover {
+  opacity: 0.7;
+  color: #000;
+}
+
+.minimalist-nav-link.active {
+  font-weight: 500;
+}
+
+.luxury-navbar .navbar-brand {
+  font-family: "Didot", "Times New Roman", serif;
+  font-weight: 400;
+  letter-spacing: 2px;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.luxury-navbar .nav-link {
+  color: var(--text-color);
+  font-weight: 300;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  padding: 0.5rem 1.2rem !important;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.luxury-navbar .nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.luxury-navbar .nav-link:hover {
+  color: #000;
+}
+
+.luxury-navbar .nav-link:hover::after,
+.luxury-navbar .nav-link.active::after {
+  width: 80%;
+  left: 10%;
+}
+
+.luxury-navbar .nav-link.active {
+  color: #000;
+}
+
+.luxury-navbar .navbar-toggler {
+  border: none;
+  padding: 0;
+}
+
+.luxury-navbar .navbar-toggler:focus {
+  box-shadow: none;
+}
+
+.luxury-navbar .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Cartier-inspired components */
+.cartier-inspired .btn-outline-light,
+.cartier-inspired .btn-outline-dark {
+  border-width: 1px;
+  border-radius: 0;
+  padding: 0.5rem 2rem;
+  font-weight: 300;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.cartier-inspired .btn-outline-light:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.cartier-inspired .btn-outline-dark:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+  color: black;
+}
+
+/* Product card styles */
+.cartier-product-card {
+  transition: transform 0.3s ease;
+}
+
+.cartier-product-card:hover {
+  transform: translateY(-5px);
+}
+
+.cartier-product-card .product-image {
+  transition: transform 0.5s ease;
+}
+
+.cartier-product-card:hover .product-image {
+  transform: scale(1.05);
+}
+
+.cartier-product-card .card-title {
+  color: #000;
+  font-size: 1rem;
+  letter-spacing: 1px;
+}
+/* Elegant Category Navigation */
+.elegant-category-nav {
+  border-bottom: 1px solid #e0e0e0;
+  padding-bottom: 10px;
+}
+
+.elegant-nav-link {
+  color: #666;
+  text-decoration: none;
+  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 0.9rem;
+  position: relative;
+  border: none;
+  background: none;
+  transition: color 0.3s ease;
+  padding-bottom: 5px !important;
+}
+
+.elegant-nav-link::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: 0;
+  left: 50%;
+  background-color: #000;
+  transition: all 0.3s ease;
+}
+
+.elegant-nav-link:hover {
+  color: #000;
+}
+
+.elegant-nav-link:hover::after,
+.elegant-nav-link.active::after {
+  width: 100%;
+  left: 0;
+}
+
+.elegant-nav-link.active {
+  color: #000;
+}
+.cartier-category-nav .nav-link {
+  color: #333;
+  border-bottom: 1px solid transparent;
+  background-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.cartier-category-nav .nav-link:hover,
+.cartier-category-nav .nav-link.active {
+  color: #000;
+  border-bottom: 1px solid #000;
+  background-color: transparent;
+}
+
+/* Typography for Cartier-inspired design */
+.fw-light {
+  font-weight: 300 !important;
+}
+
+.text-uppercase {
+  letter-spacing: 1px;
+}
+
+/* Collection card styles */
+.collection-card {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.collection-card img {
+  transition: transform 0.5s ease;
+}
+
+.collection-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2rem;
+  }
+}
+
+/* High-end navigation style */
+.high-end-nav {
+  border-bottom: 1px solid #e0e0e0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.high-end-nav-list {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.high-end-nav-item {
+  margin: 0;
+}
+
+.high-end-nav-link {
+  display: block;
+  padding: 12px 15px;
+  color: #000;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.high-end-nav-link:hover {
+  color: #000;
+}
+
+.high-end-nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 15px;
+  right: 15px;
+  height: 3px;
+  background-color: transparent;
+  transition: background-color 0.3s;
+}
+
+.high-end-nav-link.active::after {
+  background-color: #e10600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .high-end-nav-link {
+    padding: 10px 8px;
+    font-size: 0.7rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .high-end-nav-list {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    justify-content: flex-start;
+    padding-bottom: 5px;
+  }
+
+  .high-end-nav-link {
+    white-space: nowrap;
+  }
+}
+
+/* Add this to your CSS file */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.2);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.cart-badge-animated {
+  animation: pulse 1.5s infinite;
+}
+
+/* For a bounce effect when items are added to cart */
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-5px);
+  }
+  60% {
+    transform: translateY(-2px);
+  }
+}
+
+/* You can apply this class when a new item is added */
+.cart-badge-bounce {
+  animation: bounce 0.8s;
+}
