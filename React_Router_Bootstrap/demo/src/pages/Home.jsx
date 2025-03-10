@@ -1,11 +1,14 @@
+import { Card } from "react-bootstrap";
 import UserList from "../Components/UserList";
 
 const Home = () => {
   return (
-    <div>
-      <h1>Danh sách người dùng</h1>
+    <Card>
+      <Card.Title as="h1" className="align-items-center">
+        Danh sách người dùng
+      </Card.Title>
       <UserList />
-    </div>
+    </Card>
   );
 };
 
