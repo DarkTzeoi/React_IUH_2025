@@ -9,7 +9,7 @@ const SECRET_KEY = process.env.SECRET_KEY;
 
 const authRouter = require("./routes/Auth");
 const profileRouter = require("./routes/Profile");
-
+const products = require("./routes/Product");
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => console.log("✅ Kết nối MongoDB thành công"))
@@ -20,7 +20,7 @@ app.use(bodyParser.json());
 
 app.use("/api", authRouter);
 app.use("/api/profile", profileRouter);
-
+app.use("/products", products);
 app.get("/", (req, res) => {
   res.send("API dang hoat dong");
 });
