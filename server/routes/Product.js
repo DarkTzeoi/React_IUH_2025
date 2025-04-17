@@ -8,7 +8,7 @@ require("dotenv").config();
 
 const SECRET_KEY = process.env.SECRET_KEY;
 
-router.get("/products", async (req, res) => {
+router.get("/", async (req, res) => {
   try {
     const products = await Product.find();
     res.json(products);
