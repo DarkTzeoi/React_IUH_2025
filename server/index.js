@@ -21,6 +21,7 @@ app.use(bodyParser.json());
 app.use("/api", authRouter);
 app.use("/api/profile", profileRouter);
 app.use("/api/products", products);
+
 app.get("/", (req, res) => {
   res.send("API dang hoat dong");
 });
