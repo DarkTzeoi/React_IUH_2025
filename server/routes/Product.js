@@ -1,12 +1,6 @@
-const mongoose = require("mongoose");
 const express = require("express");
-const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const product = require("../model/Product");
-const router = require("./Auth");
-require("dotenv").config();
-
-const SECRET_KEY = process.env.SECRET_KEY;
+const router = require("./Product");
 
 router.get("/", async (req, res) => {
   try {
