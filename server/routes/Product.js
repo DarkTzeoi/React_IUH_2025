@@ -9,7 +9,7 @@ router.get("/", async (req, res) => {
         ...product._doc,
         imageUrls: product.images.map((image) =>
           image.replace(
-            "../../image",
+            "../../images",
             "https://jewelry-backend-inrv.onrender.com/images"
           )
         ),
